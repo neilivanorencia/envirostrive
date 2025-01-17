@@ -1,0 +1,126 @@
+.faq {
+  background-color: $color-background-primary;
+  padding: 2.4rem 0 6.4rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    max-width: 110rem;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+
+      .faq__image {
+        order: 2;
+      }
+
+      .faq__items {
+        order: 1;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      img {
+        width: 70%;
+        max-width: 300px;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        img {
+          width: 60%;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+
+  &__items,
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    @media only screen and (max-width: $bp-large) {
+      text-align: center;
+    }
+  }
+
+  &__items {
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-large) {
+      align-items: center;
+    }
+  }
+
+  &__heading {
+    text-align: left;
+    margin-bottom: 1.6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3.2rem;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.4rem 0;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 80%;
+    }
+
+    &-question {
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $color-text-subheading;
+      padding: 1.6rem;
+      border-radius: 1.2rem;
+      background-color: #253341;
+      cursor: pointer;
+
+      @media only screen and (max-width: $bp-large) {
+        padding: 1.6rem 1.2rem;
+      }
+    }
+
+    &-answer {
+      font-family: $font-display;
+      font-size: 2rem;
+      letter-spacing: 0.25px;
+      line-height: 1.2;
+      color: $color-text-default;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      margin: 0 1.2rem;
+      opacity: 0;
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+  }
+}
+
+.faq__item.active .faq__item-answer {
+  max-height: 300px;
+  margin: 1.2rem;
+  opacity: 1;
+}

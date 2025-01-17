@@ -1,0 +1,142 @@
+.hero {
+  display: grid;
+  gap: 6.4rem;
+  padding: 14rem 0 6rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+
+  &__tagline {
+    font-family: $font-display;
+    font-size: 1.8rem;
+    color: $color-icon;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    color: $color-text-heading;
+    text-align: left;
+    margin-bottom: 0;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3.2rem;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    color: $color-text-default;
+    font-family: $font-display;
+    font-size: 2.6rem;
+    margin-bottom: 8px;
+    line-height: 1.2;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__btn {
+    font-family: $font-primary;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.2rem 3.2rem;
+
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba(94, 200, 136, 0.25);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__text,
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    @media only screen and (max-width: $bp-large) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      align-items: center;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      img {
+        width: 70%;
+        max-width: 300px;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        img {
+          width: 60%;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+.brands {
+  &__heading {
+    color: $color-text-heading;
+    font-family: $font-primary;
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.8rem;
+
+    img {
+      height: 5.4rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 4.8rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        height: 3.6rem;
+        gap: 2.8rem;
+      }
+    }
+  }
+}

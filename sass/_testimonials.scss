@@ -1,0 +1,68 @@
+.testimonials {
+  position: relative;
+  background-color: $color-background-primary;
+  padding: 6.4rem 0 3.2rem;
+  z-index: 1;
+
+  &__container {
+    padding: 0 3.2rem 4.8rem;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e2834;
+  border-radius: 2rem;
+  padding: 3.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #253241;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    text-align: center;
+  }
+
+  &__message {
+    font-family: $font-display;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin-bottom: 1.6rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    line-clamp: 9;
+    -webkit-box-orient: vertical;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2rem;
+    }
+  }
+
+  &__profile {
+    font-family: $font-primary;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color-text-subheading;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.swiper-pagination {
+  padding: 3.2rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: $color-text-heading;
+}

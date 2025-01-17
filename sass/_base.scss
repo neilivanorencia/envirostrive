@@ -1,0 +1,134 @@
+$font-primary: "Fira Sans", sans-serif;
+$font-display: "Teachers", serif;
+
+$bp-largest: 1536px;
+$bp-larger: 1280px;
+$bp-large: 1024px;
+$bp-medium: 768px;
+$bp-small: 640px;
+
+$color-background-primary: #1a232e;
+$color-background-secondary: #172029;
+$color-text-default: #f9fbfc;
+$color-text-heading: #8fcf42;
+$color-text-subheading: #36ba6a;
+$color-btn-hover: #5ec888;
+$color-icon: #ffa730;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3c5268;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #253341;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: $color-background-primary;
+  color: $color-text-default;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading-1 {
+  color: $color-text-heading;
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 3.6rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 3.2rem;
+  }
+}
+
+.heading-1,
+.heading-2 {
+  font-family: $font-primary;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  line-height: 1.2;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: auto;
+  padding: 1.6rem;
+}
+
+.section {
+  padding: 7.2rem 0;
+}
+
+.btn {
+  background-color: $color-text-subheading;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+}
+
+.input,
+.textarea {
+  border: none;
+  border-bottom: 2px solid #2e363e;
+  color: $color-text-default;
+  font-family: $font-display;
+  letter-spacing: 2px;
+  outline: none;
+
+  &::placeholder {
+    color: #c7c9ca;
+  }
+
+  &:focus {
+    border-bottom: 2px solid $color-text-default;
+  }
+}
+
+.input {
+  height: 4.8rem;
+}
+
+.textarea {
+  max-height: 20rem;
+  resize: none;
+}
